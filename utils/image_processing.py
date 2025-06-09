@@ -11,9 +11,6 @@ import torchvision.transforms as transforms
 import streamlit as st
 from huggingface_hub import hf_hub_download
 
-model_path = hf_hub_download(repo_id="whattheduckk/Classification", filename="classification.keras")
-classification_model = load_model(model_path)
-
 
 # Device setup
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

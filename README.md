@@ -8,7 +8,7 @@
 ## How to Run
 
 1. Clone the repo:
-   ''' git clone https://github.com/yourname/brain-tumor-segmentation-gui.git
+   ''' git clone https://github.com/syarkK/TumorDetection-Segmentation
 cd brain-tumor-segmentation-gui '''
 2. Install dependencies: 
    ''' pip install -r requirements.txt ''' 
