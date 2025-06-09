@@ -1,0 +1,8 @@
+streamlit
+torch
+torchvision
+segmentation-models-pytorch
+Pillow
+numpy
+tensorflow
+huggingface_hub
