@@ -11,19 +11,25 @@ def load_lottie_url(url):
     return r.json()
 
 def show_welcome():
-    st.markdown("<h1 style='text-align: center;'>👨‍⚕️ TumorNet</h1>", unsafe_allow_html=True)
-    st.markdown("<h4 style='text-align: center; color: gray;'>Helping doctors detect and segment brain MRI tumors", unsafe_allow_html=True)
+    # Load your custom headline animation
+    headline_lottie_url = "https://lottie.host/8fdfa294-378a-4dc8-ab5f-75017b687791/Fqz0j0fwtp.json"
+    headline_lottie_json = load_lottie_url(headline_lottie_url)
 
-    # Load Lottie animation
-    lottie_url = "https://lottie.host/2841b819-67cd-4299-abd6-aec5c09a4ec3/3xguLRcNIM.json" 
+    # Display the animation centered at the top as the "TumorNet" logo/title
+    st_lottie(headline_lottie_json, height=250, key="tumornet_headline")
+
+    # Optional subheadline
+    st.markdown("<h4 style='text-align: center; color: gray;'>Helping doctors detect and segment brain MRI tumors</h4>", unsafe_allow_html=True)
+
+    # Load brain animation
+    lottie_url = "https://lottie.host/2841b819-67cd-4299-abd6-aec5c09a4ec3/3xguLRcNIM.json"
     lottie_json = load_lottie_url(lottie_url)
 
     st_lottie(lottie_json, height=350, key="brain_animation")
 
     # Create two columns
     col1, col2 = st.columns(2)
-    
-    # Left: Features box
+
     with col1:
         st.markdown(
             """
@@ -39,11 +45,10 @@ def show_welcome():
             unsafe_allow_html=True
         )
 
-    # Right: Group Members box
     with col2:
         st.markdown(
             """
-            <div style="background-color:#ffd200; padding:20px; border-radius:10px;">
+            <div style="background-color:#ffd200; padding:20px; border-radius:10px; color:black">
                 <h3>👥 Group Members</h3>
                 <ul>
                     <li><b>Anastasia Prameswari Dwi Putri</b></li>
